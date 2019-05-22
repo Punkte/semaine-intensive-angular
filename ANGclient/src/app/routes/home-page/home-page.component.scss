@@ -9,8 +9,9 @@ $list: alimentation, services, beaute--sante-et-bien-etre, restauration, maison-
   &__item {
     display: inline-block;
     padding: 5px 15px;
+    cursor: pointer;
     @each $item in $list {
-      &.#{$item} {
+      .#{$item} {
         color: rgb(random(255), random(255), random(255));
       }
     }

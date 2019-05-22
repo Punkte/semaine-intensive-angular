@@ -1,10 +1,15 @@
 <div *ngIf="merchantCollection">
   <div class="list__container">
-    <div class="list__item" *ngFor="let item of categoriesCollection" >
+    <div 
+      *ngFor="let item of categoriesCollection" 
+      class="list__item"
+      [class]="{'list__item': true, 'active': activeCategory === item.slug}" 
+      (click)="filterCategory(item.slug)"
+    >
       {{ item.name }}
     </div>
   </div>
   <!-- {{merchantCollection | json}} -->
-  <app-merchant-card [merchant]="merchantCollection"></app-merchant-card>
+  <app-merchant-card [merchant]="(filteredCategory.length > 0) ? filteredCategory : merchantCollection"></app-merchant-card>
 <div>
 lol

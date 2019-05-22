@@ -45,6 +45,8 @@ export class AuthService {
     .toPromise().then(this.getData).catch(this.handleError)
   }
 
+  public disconnect = () => window.localStorage.remove('user-token');
+
   // Get the API response
   private getData(res: any){
     return res || {};

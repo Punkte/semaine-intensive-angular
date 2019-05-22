@@ -11,10 +11,12 @@ export class HomePageComponent implements OnInit {
   public merchantCollection: Array<any>;
   public categoriesCollectionSlug: Array<any> = [];
   public categoriesCollection: Array<any> = [];
+  public filteredCategory: Array<any> = [];
+  public activeCategory: string;
 
   constructor(
     private merchantService: MerchantService,
-  ) { }
+  ) {}
   private getMerchantList = () => {
     this.merchantService.readAllItems()
       .then(apiResponse => {
@@ -30,7 +32,10 @@ export class HomePageComponent implements OnInit {
         this.categoriesCollection.push(item.category);
       }
     });
-    console.log(this.categoriesCollection);
+  }
+  public filterCategory = (slug: string) => {
+    this.filteredCategory = this.merchantCollection.filter(el => el.category.slug === slug);
+    this.activeCategory = slug;
   }
 
   public sortMerchant = (slug: string) => {

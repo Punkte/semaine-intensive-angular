@@ -36,7 +36,7 @@ export class HeaderComponent implements OnInit, OnChanges {
       },
       {
         value: 'Mon compte',
-        path: '/me'
+        path: '/user-page'
       }
     ];
    }
