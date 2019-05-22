@@ -5,3 +5,16 @@ $list: alimentation, services, beaute--sante-et-bien-etre, restauration, maison-
     color: rgb(random(255), random(255), random(255));
   }
 }
+.list {
+  &__item {
+    display: inline-block;
+    padding: 5px 15px;
+    cursor: pointer;
+  }
+  @each $item in $list {
+    &__item .#{$item} {
+      color: rgb(random(255), random(255), random(255));
+    }
+  }
+
+}
