@@ -1,0 +1,8 @@
+<div *ngFor="let item of merchant" [class]="item.category.slug">
+ <!-- {{ item | json  }}<br><br> -->
+ <h4>{{item.content.name}}</h4>
+ <p>
+   {{ item.content.infos.address }} - {{ item.content.infos.city }}
+ </p>
+ <span></span>
+</div>

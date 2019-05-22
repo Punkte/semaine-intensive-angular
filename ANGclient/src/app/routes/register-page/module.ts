@@ -16,3 +16,4 @@ import { FormRegisterComponent } from '../../components/form-register/form-regis
     ]
 })
 export class Module {}
+

@@ -1,6 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-register',
@@ -35,7 +34,7 @@ export class FormRegisterComponent implements OnInit {
   }
 
   public submitForm = () => {
-    this.formSubmit.emit(this.formData.value)
+    this.formSubmit.emit(this.formData.value);
   }
 
   ngOnInit() {

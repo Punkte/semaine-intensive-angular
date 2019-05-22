@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-login',
@@ -19,7 +19,7 @@ export class FormLoginComponent implements OnInit {
     this.formData = this.Builder.group({
       email: [ 'john@doe.com', Validators.required ],
       password: [ 'azerty123', Validators.required ],
-    })
+    });
   }
 
   public submitForm = () => {

@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss', '../../node_modules/bulma/css/bulma.css']
 })
 export class AppComponent implements OnInit {
+  
+  public appTitle: string;
 
-  constructor() {}
+  constructor(){
+    this.appTitle = `Hello Stranger`
+  }
 
-  ngOnInit() {}
+  ngOnInit(){}
 }

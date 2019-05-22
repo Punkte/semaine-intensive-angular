@@ -1,0 +1,19 @@
+$list: alimentation, services, beaute--sante-et-bien-etre, restauration, maison-et-deco, loisirs-et-divertissements;
+
+@each $item in $list {
+  .#{$item} {
+    color: rgb(random(255), random(255), random(255));
+  }
+}
+.list {
+  &__item {
+    display: inline-block;
+    padding: 5px 15px;
+    @each $item in $list {
+      &.#{$item} {
+        color: rgb(random(255), random(255), random(255));
+      }
+    }
+  }
+
+}

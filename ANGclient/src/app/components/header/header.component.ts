@@ -7,11 +7,11 @@ import { Component, OnInit, OnChanges, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit, OnChanges {
 
-  public loggedNav: Array<any>
-  public unLoggedNav: Array<any>
-  public activeNav: Array<any>
+  public loggedNav: Array<any>;
+  public unLoggedNav: Array<any>;
+  public activeNav: Array<any>;
 
-  @Input() title: string
+  @Input() title: string;
 
   constructor() {
     this.unLoggedNav = [
@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit, OnChanges {
         value: 'Connexion',
         path: '/login'
       }
-    ]
+    ];
 
     this.loggedNav = [
       {
@@ -38,21 +38,21 @@ export class HeaderComponent implements OnInit, OnChanges {
         value: 'Mon compte',
         path: '/me'
       }
-    ]
+    ];
    }
 
   private checkUserToken = () => {
-    window.localStorage.getItem('user-token') 
-    ? this.activeNav = this.loggedNav 
-    : this.activeNav = this.unLoggedNav 
+    window.localStorage.getItem('user-token')
+    ? this.activeNav = this.loggedNav
+    : this.activeNav = this.unLoggedNav;
   }
 
   ngOnInit() {
-    this.checkUserToken()
+    this.checkUserToken();
   }
 
   ngOnChanges(changes: any) {
-    console.log(changes)
+    console.log(changes);
   }
 
 }

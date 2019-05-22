@@ -1,14 +1,35 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+/*
+Imports
+*/
+    // Angular
+    import { NgModule } from '@angular/core';
+    import { CommonModule } from '@angular/common';
+    import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { LoginPageComponent } from './login-page.component';
-import { Routing } from './router';
+    // Inner
+    import { LoginPageComponent } from './login-page.component';
+    import { Routing } from './router';
+    import { FormLoginComponent } from '../../components/form-login/form-login.component';
+//
 
-@NgModule({
-    declarations: [ LoginPageComponent ],
-    imports: [
-      CommonModule,
-      Routing
-    ]
-})
-export class Module {}
+
+/*
+Definition
+*/
+    @NgModule({
+        declarations: [ LoginPageComponent, FormLoginComponent ],
+        imports: [
+            CommonModule,
+            FormsModule,
+            ReactiveFormsModule,
+            Routing
+        ]
+    })
+//
+
+
+/*
+Export
+*/
+    export class Module {}
+//

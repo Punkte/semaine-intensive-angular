@@ -1,3 +1,10 @@
-<p>
-  home-page works!
-</p>
+<div *ngIf="merchantCollection">
+  <div class="list__container">
+    <div class="list__item" *ngFor="let item of categoriesCollection" >
+      {{ item.name }}
+    </div>
+  </div>
+  <!-- {{merchantCollection | json}} -->
+  <app-merchant-card [merchant]="merchantCollection"></app-merchant-card>
+<div>
+lol
