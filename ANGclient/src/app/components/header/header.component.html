@@ -1,20 +1,10 @@
-<header class="navbar">
-  <h1 class="title">Titre</h1>
-  <nav class="navbar">
+<header>
+  <h1 [textContent]="title"></h1>
+  <nav>
     <ul>
-      <li>
-        <a [routerLink]="'/'">Accueil</a>
-      </li>
-      <li>
-        <a [routerLink]="'/login'">Connexion</a>
-      </li>
-      <li>
-          <a [routerLink]="'/register'">Inscription</a>
-        </li>
-        <li>
-          <a [routerLink]="'/user-page'">Mon compte</a>
-      </li>
+      <li *ngFor="let item of activeNav">
+        <a [routerLink]="item.path" [textContent]="item.value"></a>
+    </li>
     </ul>
   </nav>
 </header>
-
